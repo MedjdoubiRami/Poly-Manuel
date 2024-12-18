@@ -1,0 +1,101 @@
+/* TODO : Utiliser une grille pour l'affichage des éléments */
+#description-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 50px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+/*  TODO : Gérer la taille de l'image */
+#image-container {
+    width: 600px;
+    height: 600px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+#item-description-container {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-container {
+    width: 600px;
+    height: 300px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+/* TODO : Compléter la mise en page du formulaire */
+#item-preview {
+    height: 100%;
+    width: 100%; 
+}
+
+#item-description-container div {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contact-form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#form-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0px; 
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    gap: 10px; 
+    box-sizing: border-box;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+}
+
+#message-container {
+    height: 65%;
+}
+
+/* TODO : Limiter la taille de la zone de texte */
+textarea {
+    flex-grow: 1; 
+    max-width: 576.8px;
+    min-width: 100px;
+    resize: horizontal;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* CSS fourni  */
+
+#item-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

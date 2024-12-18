@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/img/favico.ico">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- TODO : Ajouter les liens vers les bons fichiers CSS -->
+  <link rel="stylesheet" href="./assets/css/shared.css">
+  <link rel="stylesheet" href="./assets/css/item.css">
+  <title>PolyManuel</title>
+</head>
+
+<body>
+  <header>
+    <nav id="nav-bar">
+      <a href="./index.html" id="logo-container" class="flex-center">
+        <img alt="logo" src="assets/img/logo.png" title="Accueil">
+      </a>
+      <ul class="flex-center">
+        <li><a href="./add.html" title="Créer une anonce">Annonce <i class="fa fa-book"></i></a></li>
+        <li><a href="./about.html" title="Information">À propos <i class="fa fa-circle-info "></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="item-main">
+    <!-- TODO : Compléter l'affichage de la page -->
+    <h1 id="item-title">Compilers: Principles, Techniques, and Tools</h1>
+    <section id="description-container">
+      <section id="image-container"> 
+        <img src="./assets/img/item-1.jpg" id="item-preview">
+      </section>
+      <!-- TODO : Compléter la description de l'item -->
+      <section id="item-description-container">
+        <div>
+          <p>Prix: </p>
+          <p id="item-price">70$</p> 
+        </div>
+        <div>
+          <p>État: </p>
+          <p id="item-state">Nouveau</p>  
+        </div>
+        <div>
+          <p>Vendeur: </p>
+          <p id="item-seller">Jean Untel</p>
+        </div>
+      </section>
+      <section id="form-container">
+        <!-- TODO : Compléter le formulaire  -->
+        <form id="contact-form">
+          <fieldset id="form-box">
+            <legend>Envoyer un message</legend>
+            <div class="form-control" id="message-name"> 
+              <label for="name">Votre nom: </label>
+              <input type="text" id="name" pattern=".*\S+.*"  required/>
+            </div>
+            <div class="form-control" id="message-container"> 
+              <label for="message">Message: </label>
+              <textarea id="message" placeholder="Cet item est-il enocre disponible?" maxlength="50" required></textarea>
+              <div id="error-message" style="color: red; display: none;"></div>
+            </div>
+            <input class="submit-control" type="submit" value="Envoyez le message" />
+          </fieldset>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <!-- TODO : Ajouter les bons identifiants -->
+    <span id="student-1">Medjdoubi, Rami 2208273</span>
+    <span id="student-2">Filion, Jordan 2208666</span>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        const message = document.getElementById('message').value.trim();
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.style.display = 'none'; 
+
+        const wordCount = message.split(/\s+/).filter(word => word.length > 0).length;
+
+        if (message.length > 50) {
+            e.preventDefault();
+            errorMessage.textContent = 'Le message ne doit pas dépasser 50 caractères.';
+            errorMessage.style.display = 'block';
+        } else if (wordCount < 5) {
+            e.preventDefault();
+            errorMessage.textContent = 'Le message doit contenir au moins 5 mots.';
+            errorMessage.style.display = 'block';
+        }
+    });
+
+  </script>
+
+</body>
+
+</html>

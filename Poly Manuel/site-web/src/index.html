@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/img/favico.ico">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" />
+  <link rel="stylesheet" href="./assets/css/shared.css">
+  <!-- TODO : Ajouter les liens vers les bons fichiers CSS -->
+  <link rel="stylesheet" href="./assets/css/shared.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <title>PolyManuel</title>
+</head>
+
+<body>
+  <header>
+    <nav id="nav-bar">
+      <a href="./index.html" id="logo-container" class="flex-center">
+        <img alt="logo" src="assets/img/logo.png" title="Accueil">
+      </a>
+      <!-- TODO : Implémenter la barre de recherche -->
+      <form id="search-form" method="get">
+        <input type="text" id="search-input" name="query" placeholder="Recherche">
+        <button type="submit" id="search-button">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <ul class="flex-center">
+        <li><a href="./add.html" title="Créer une anonce">Annonce <i class="fa fa-book"></i></a></li>
+        <li><a href="./about.html" title="Information">À propos <i class="fa fa-circle-info "></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="main-item-list">
+      <h1>Les dernières annonces</h1>
+      <div id="item-list">
+        <!-- TODO : Completer les vignettes des manuels -->
+        <a href="item.html" id="item-1" class="item-container">
+            <div class="item-name">
+              <h3>Compilers: Principles, Techniques, and Tools</h3>
+            </div>
+            <img src="assets/img/item-1.jpg" alt="Item 1">
+            <div class="item-price">
+              <h3>70$</h3>
+            </div>
+            <div class="status-badge used-status-new"></div>
+        </a>
+        <a href="item.html" id="item-2" class="item-container">
+            <div class="item-name">
+              <h3>Design Patterns</h3>
+            </div>
+            <img src="assets/img/item-2.jpg" alt="Item 2">
+            <div class="item-price">
+              <h3>40$</h3>
+            </div>
+            <div class="status-badge used-status-used"></div>
+        </a>
+        <a href="item.html" id="item-3" class="item-container">
+            <div class="item-name">
+              <h3>The C Programming Language</h3>
+            </div>
+            <img src="assets/img/item-3.jpg" alt="Item 1">
+            <div class="item-price">
+              <h3>55$</h3>
+            </div>
+            <div class="status-badge used-status-new"></div>
+        </a>
+    </section>
+  </main>
+
+  <footer>
+    <!-- TODO : Ajouter les bons identifiants -->
+    <span id="student-1">Medjdoubi, Rami 2208273</span>
+    <span id="student-2">Filion, Jordan 2208666</span>
+  </footer>
+</body>
+
+</html>

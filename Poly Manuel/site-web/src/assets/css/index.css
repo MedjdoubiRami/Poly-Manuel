@@ -1,0 +1,135 @@
+#search-button {
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    /* TODO : Changer le curseur et la couleur du bouton */
+    cursor: pointer;
+}
+
+#search-button i {
+    color: var(--main-color);
+    font-size: 16px;
+}
+
+#search-button:hover i {
+    color: var(--highlight-color);
+}
+
+/* TODO : Centrer et compléter le visuel de la barre de recherche */
+#search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 50%;;
+}
+
+#main-item-list {
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    /* TODO : Ajouter la couleur principale */
+    background-color: var(--main-bg);
+}
+
+#item-list {
+    /* TODO : afficher les éléments qui débordent sur la prochaine ligne */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+/* TODO : Compléter la mise en page des vignettes d'items */
+
+/* TODO : Ajouter un effet d'agrandissement de 10% */
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 475px;
+    height: 475px;
+    background-color: var(--container-bg);
+    text-align: center;
+    position: relative;
+}
+
+.item-container img {
+    width: auto;
+    height: 80%;
+    transition: transform 0.5s ease;
+}
+
+.item-container:hover img {
+    transform: scale(1.1);
+}
+
+.item-name h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.item-price h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.status-badge {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.item-container:hover .status-badge {
+    opacity: 1;
+}
+
+
+/* TODO : Utiliser la bonne variable pour la couleur */
+.used-status-new {
+    background-color: var(--new-condition);
+}
+
+.used-status-used {
+    background-color: var(--used-condition);
+}
+
+
+/* CSS fourni */
+
+#search-input {
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.item-container:hover .hidden {
+    visibility: visible;
+}
+
+.used-status {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+
+/* TODO : Compléter les requêtes média pour 500 et 800px */
